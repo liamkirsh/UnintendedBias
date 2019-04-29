@@ -93,8 +93,9 @@
 								</ul>-->
 								<p class="content"><b>Training data bias</b> appears when we teach a model using human-generated examples. If the examples contain human biases, this can skew the predictions that are made. For example, a <a href="https://arxiv.org/pdf/1607.06520.pdf">system designed to predict word associations</a> might be trained using English text from news articles. Without interventions to mitigate bias, the model would associate "homemaker" with "female" and "computer programmer" with "male".<br><br>
                                 <b>Algorithmic focus bias</b> is introduced when a system designer deliberately chooses not to use certain types of information in decision-making. In some cases, the deliberate non-use of certain data attributes may not ensure fairness in the way predictions are made. For example, researchers trained a machine learning model using a data set of individuals' FICO credit scores, racial membership, and whether the individual defaulted on their loan. They found that when using a race-blind FICO credit score threshold to decide whether to grant loans, black non-defaulters were <a href="https://arxiv.org/pdf/1610.02413.pdf">much less likely to qualify for a loan</a> than Asian or white ones. (<a href="http://research.google.com/bigpicture/attacking-discrimination-in-ml/">interactive visualization</a>)<br><br>
-                                <b>Transfer context bias</b> occurs when a machine learning algorithm is applied outside of the context it for which it was intended. Integer maximus varius lorem, sed convallis diam accumsan sed.<br><br>
-                                <b>Interpretation bias</b> Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
+                                <b>Algorithmic processing bias</b><br><br>
+                                <b>Transfer context bias</b> occurs when a machine learning algorithm is applied outside of the context it for which it was intended. Machine learning systems in healthcare are one instance where the models are likely to contain this bias: they may perform poorly in rural clinics if developed for research hospitals.<br><br>
+                                <b>Interpretation bias</b> Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum.</p>
 								<footer class="major">
 									<ul class="actions special">
 										<li><a href="https://www.cmu.edu/dietrich/philosophy/docs/london/IJCAI17-AlgorithmicBias-Distrib.pdf" target="_blank" class="button">Learn More</a></li>
@@ -143,6 +144,32 @@
 									<h2>What You Can Do</h2>
 									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
 									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+                                    <div class="container"><div class="accordion">
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-item__title">Data Layer</h3>
+                                            <div class="accordion-item__content">
+                                                <div class="accordion-item__content-inside">
+                                                    I'm inside accordion 1!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-item__title">Model Layer</h3>
+                                            <div class="accordion-item__content">
+                                                <div class="accordion-item__content-inside">
+                                                    I'm inside accordion 2!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-item__title">Deployment Layer</h3>
+                                            <div class="accordion-item__content">
+                                                <div class="accordion-item__content-inside">
+                                                    I'm inside accordion 3!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div></div>
 								</header>
 								<footer class="major">
 									<ul class="actions special">
@@ -188,6 +215,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+            <script src="assets/js/index.js"></script>
 
 	</body>
 </html>

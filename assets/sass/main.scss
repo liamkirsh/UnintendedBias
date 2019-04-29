@@ -68,3 +68,70 @@
 	@import 'layout/main';
 	@import 'layout/footer';
 	@import 'layout/wrapper';
+
+/* Accordion */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(100vw - 40px);
+    //min-height: calc(100vh - 40px);
+    padding: 20px;
+}
+
+.accordion {
+    width: 600px;
+}
+
+.accordion-item {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.1);
+    margin: 15px 0;
+    
+    &__title {
+        background: #5588fa;
+        color: #fff;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 15px 20px;
+        cursor: pointer;
+        margin: 0;
+        transition: 0.2s ease;
+        font-size: 14px;
+        
+        @media (min-width: 730px) {
+            font-size: 18px;
+        }
+        
+        &:hover {
+            //background: darken(#5588fa, 8%);
+            background: #9acff2;
+            transition: 0.2s ease;
+        }
+    }
+    
+    &__content {
+        //color: rgba(0,0,0,0.65);
+        //color: rgb(140, 201, 240);
+        line-height: 1.7em;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s ease;
+        //font-size: 14px;
+        
+        @media (min-width: 730px) {
+            //font-size: 16px;
+        }
+        
+        &.is-open {
+            max-height: 600px;
+            transition: 0.5s ease;
+        }
+    }
+    
+    &__content-inside {
+        padding: 15px 20px;
+    }
+}
