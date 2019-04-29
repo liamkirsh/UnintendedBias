@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Fairness in Machine Learning</title>
+		<title>Unintended Bias in Machine Learning</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -28,7 +28,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="#intro" class="active">What is unintended bias?</a></li>
-							<li><a href="#first">What kinds of bias exist?</a></li>
+							<li><a href="#first">What sources does unintended bias have?</a></li>
 							<li><a href="#second">What problems are we facing?</a></li>
 							<li><a href="#cta">What you can do</a></li>
 						</ul>
@@ -44,19 +44,17 @@
 										<header class="major">
 											<h2>What is unintended bias?</h2>
 										</header>
-                                        <p>In supervised machine learning, we train (teach) the machine to make inferences
+                                        <p>In supervised machine learning, we <i>train</i> (teach) the machine to make inferences
                                         about data we haven't yet shown to it. We do this by feeding the machine training data,
                                         example data that is already tagged with the correct answer. For example, I could
                                         use a basket of fruit to teach the machine that round, red fruits are
-                                        apples and cylindrical, yellow fruits are bananas. Then, if I present a banana
-                                        from a different basket to the machine, it will classify the fruit as a banana based
-                                        on its color and shape as a banana.<br><br>
+                                        apples and cylindrical, yellow fruits are bananas. The machine develops a <i>model</i>
+                                        based on the relationships and patterns between attributes of the examples. Then, if I
+                                        present a banana from a different basket to the machine, it will classify the fruit as
+                                        a banana based on its color and shape as a banana.<br><br>
                                         When supervised machine learning is used to make predictions about someone's behavior,
-                                        unintended bias can occur. Unintended bias is a special kind of failure where the machine
+                                        unintended bias can occur. Unintended bias is a special kind of failure where the model
                                         makes better predictions for members of some demographic groups than others.</p>
-                                        <!--<p>A classic source of failures in software systems is known as "do what I
-                                        mean, not what I say": when code does not do what you expect it to, though
-                                        it executes as it was programmed to.</p>-->
 										<!--<ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>
 										</ul>-->
@@ -68,9 +66,8 @@
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>What kinds of bias exist?</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+									<h2>What sources does unintended bias have?</h2>
+									<p>Understanding sources of unintended bias can help system designers recognize and mitigate them.</p>
 								</header>
 								<!--<ul class="statistics">
 									<li class="style1">
@@ -94,14 +91,13 @@
 										<strong>1,024</strong> Nullam
 									</li>
 								</ul>-->
-								<p class="content"><b>Training data bias</b> Nam elementum nisl et mi a commodo porttitor.<br><br>
-                                <b>Algorithmic focus bias</b> Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus.<br><br>
-                                <b>Algorithmic processing bias</b> Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus.<br><br>
-                                <b>Transfer context bias</b> Integer maximus varius lorem, sed convallis diam accumsan sed.<br><br>
+								<p class="content"><b>Training data bias</b> appears when we teach a model using human-generated examples. If the examples contain human biases, this can skew the predictions that are made. For example, a <a href="https://arxiv.org/pdf/1607.06520.pdf">system designed to predict word associations</a> might be trained using English text from news articles. Without interventions to mitigate bias, the model would associate "homemaker" with "female" and "computer programmer" with "male".<br><br>
+                                <b>Algorithmic focus bias</b> is introduced when a system designer deliberately chooses not to use certain types of information in decision-making. In some cases, the deliberate non-use of certain data attributes may not ensure fairness in the way predictions are made. For example, researchers trained a machine learning model using a data set of individuals' FICO credit scores, racial membership, and whether the individual defaulted on their loan. They found that when using a race-blind FICO credit score threshold to decide whether to grant loans, black non-defaulters were <a href="https://arxiv.org/pdf/1610.02413.pdf">much less likely to qualify for a loan</a> than Asian or white ones. (<a href="http://research.google.com/bigpicture/attacking-discrimination-in-ml/">interactive visualization</a>)<br><br>
+                                <b>Transfer context bias</b> occurs when a machine learning algorithm is applied outside of the context it for which it was intended. Integer maximus varius lorem, sed convallis diam accumsan sed.<br><br>
                                 <b>Interpretation bias</b> Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
 								<footer class="major">
 									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
+										<li><a href="https://www.cmu.edu/dietrich/philosophy/docs/london/IJCAI17-AlgorithmicBias-Distrib.pdf" target="_blank" class="button">Learn More</a></li>
 									</ul>
 								</footer>
 							</section>
@@ -110,7 +106,7 @@
 							<section id="second" class="main special">
 								<header class="major">
 									<h2>What's the problem?</h2>
-                                    <p>We are already seeing the harms.</p>
+                                    <p>We are already seeing harms.</p>
 								</header>
 								<ul class="features">
 									<li>
