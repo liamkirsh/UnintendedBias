@@ -1709,6 +1709,8 @@ table.alt tbody tr td {
       margin-top: 0; }
     .features li > :last-child {
       margin-bottom: 0; }
+  .features li.big {
+    width: calc(100% - 2em); }
   @media screen and (max-width: 980px) {
     .features li {
       width: calc(50% - 2em); }

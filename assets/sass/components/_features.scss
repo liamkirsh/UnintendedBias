@@ -32,6 +32,10 @@
 			}
 		}
 
+        li.big {
+            width: calc(#{(100%)} - #{_size(element-margin)});
+        }
+
 		@include breakpoint('<=medium') {
 			li {
 				width: calc(#{(100% / 2)} - #{_size(element-margin)});
